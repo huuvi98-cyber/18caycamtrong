@@ -1,0 +1,6 @@
+{
+  "name": "Infographic 18 Loài Cây Cấm Trồng Tại Hà Nội",
+  "description": "Infographic tra cứu danh mục 18 loài cây cấm trồng trên địa bàn thành phố Hà Nội với lý do cụ thể và phân loại chi tiết.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-serif-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Print Styles for Exporting Infographic */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+
+  .rotate-y-180 {
+    transform: none !important;
+  }
+
+  .backface-hidden {
+    backface-visibility: visible !important;
+  }
+}
+
+/* Soft scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f7f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b7e4c7;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #74c69d;
+}
