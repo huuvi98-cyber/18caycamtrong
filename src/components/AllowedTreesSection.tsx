@@ -32,22 +32,24 @@ export const AllowedTreesSection: React.FC = () => {
 
   return (
     <section className="space-y-8 pt-6 sm:pt-10 border-t border-slate-700/20 relative">
-      {/* Main Section Title Container (Optimized for Mobile so Text is Never Cover) */}
-      <div className="relative bg-white/90 backdrop-blur-md p-4 sm:p-7 rounded-2xl border border-slate-300 shadow-xs flex items-center justify-between overflow-visible min-h-[90px] sm:min-h-[110px]">
-        {/* Title Text on Left (pr-28 on mobile gives safe clear space) */}
-        <div className="pr-24 sm:pr-64 md:pr-80 z-10">
-          <h2 className="text-lg sm:text-2xl lg:text-3xl font-extrabold font-sans text-slate-950 uppercase tracking-wide leading-snug">
+      {/* Main Section Title Container (Flex-col on mobile so image sits BELOW text with zero cutoff) */}
+      <div className="relative bg-white/90 backdrop-blur-md p-5 sm:p-7 rounded-2xl border border-slate-300 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4 overflow-visible min-h-[100px]">
+        {/* Title Text (Full width on mobile, pr-64/pr-80 on desktop) */}
+        <div className="w-full sm:pr-64 md:pr-80 z-10 text-center sm:text-left">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold font-sans text-slate-950 uppercase tracking-wide leading-snug">
             DANH MỤC CÂY XANH ĐƯỢC PHÉP TRỒNG
           </h2>
         </div>
 
-        {/* Vector Image: Compact on Mobile (h-28 -top-6), Large on Desktop (sm:h-52 md:h-64) */}
-        <img
-          src="/assets/aistudio/image_d2536976.png"
-          alt="Minh họa trồng cây"
-          className="absolute right-1 sm:right-6 -top-6 sm:-top-16 md:-top-20 h-28 sm:h-52 md:h-64 object-contain pointer-events-none z-20 drop-shadow-md"
-          referrerPolicy="no-referrer"
-        />
+        {/* Vector Image: Below title on Mobile (static, mx-auto, h-36), Overflowing on Desktop (sm:absolute sm:right-6 sm:-top-16 md:-top-20 sm:h-52 md:h-64) */}
+        <div className="w-full sm:w-auto flex justify-center z-20 shrink-0 mt-2 sm:mt-0">
+          <img
+            src="/assets/aistudio/image_d2536976.png"
+            alt="Minh họa trồng cây"
+            className="h-36 sm:h-52 md:h-64 object-contain pointer-events-none drop-shadow-md sm:absolute sm:right-6 sm:-top-16 md:-top-20"
+            referrerPolicy="no-referrer"
+          />
+        </div>
       </div>
 
       {/* Grid: Card 1 increased width 20% (col-span-7), Card 2 narrowed width 20% (col-span-5) */}
